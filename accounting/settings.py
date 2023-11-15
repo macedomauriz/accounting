@@ -30,7 +30,9 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# Django apps are “pluggable”: You can use an app in multiple projects.
 INSTALLED_APPS = [
+    "tracker.apps.TrackerConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
