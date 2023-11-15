@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+egg-info/
+*.egg-info/
+*.egg
+*.egg-info
+
+# Virtual environments
+venv/
+env/
+bin/
+include/
+lib/
+lib64/
+share/
+
+# Database
+db.sqlite3
+
+# Local development settings
+*.env
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Django-specific
+*.log
+*.pot
+*.pyc
+local_settings.py
+
+# Pipenv
+Pipfile.lock
+
+# Ignore the pipenv virtual environment
+/.venv
