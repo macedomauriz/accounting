@@ -5,13 +5,16 @@ class Character(models.Model):
     PEACH = "C"
     BIRDO = "T"
     MARIO = "H"
-    TYPE = (
+    CHARACTER_TYPE = (
         (PEACH, "peaches"),
         (BIRDO, "birdos"),
         (MARIO, "marios"),
     )
 
     name = models.CharField(max_length=20, null=False, blank=False)
+    character_type = models.CharField(
+        max_length=1, choices=CHARACTER_TYPE, default=PEACH
+    )
 
     def __str__(self):
         return self.name
