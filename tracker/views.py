@@ -1,12 +1,21 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 
+from .models import Character
+from .serializers import CharacterSerializer
+from rest_framework import permissions
+from rest_framework import viewsets
 
-def index(request):
-    return HttpResponse(
-        "This is NOT admin.site.urls, this is tracker.urls, NOT the admin, this is the APP index route, generally returns tamplates"
-    )
 
-
+# pure Django example
 def detail(request, number):
     return HttpResponse("You're looking at question %s." % number)
+
+
+class CharactersViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+
+    queryset = Character.objects.all()
+    serializer_class = CharacterSerializer
+    permission_classes = [permissions.IsAuthenticated]
